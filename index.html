@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="{$locale.selected.languageCode}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Yetti" />
+    <title>Munchkin counter | Martin Blackburn</title>
+    <meta name="description" content="A small tool to help you keep track during munchkin game." />
+    <link rel="shortcut icon" href="images/favicon.gif" type="image/gif" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <!-- CSS -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    <!-- JS LIB -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38705814-1']);
+        _gaq.push(['_trackPageview', '/project/munchkin-counter']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="row header">
+        <div class="content">
+            <div class="column-12">
+                <h1>Munchkin Level Counter</h1>
+                                 
+                <div class="controls">
+                    <div class="control">
+                        <label>Number of players</label>
+                        <select class="numPlayers">
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                   
+                    <div class="control">
+                        <label>Winning level</label>
+                        <input class="winningLevel" value="10" type="text" />
+                    </div>
+                    
+                    <div class="control">
+                        <div class="button reset">Reset</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="content">
+            <div class="column-12">
+                <ul class="players">
+                    <li class="container player">
+                        <div class="top">
+                            <input class="name" type="text" />
+                        </div>
+                        
+                        <div class="left">
+                            <h2>Level</h2>
+                            
+                            <div class="button increase level">&#9650;</div>
+                            
+                            <div class="value">1</div>
+                            
+                            <div class="button decrease level">&#9660;</div>
+                        </div>
+                        
+                        <div class="right">
+                            <h2>Gear</h2>
+                            
+                            <div class="button increase gear">&#9650;</div>
+                            
+                            <div class="value">0</div>
+                            
+                            <div class="button decrease gear">&#9660;</div>
+                        </div>
+                        
+                        <div class="clear"></div>
+                        
+                        <div class="warrior bottom">
+                            Not a Warrior
+                        </div>
+                        
+                        <div class="strength bottom">
+                            <h2>Strength</h2>
+                            <div class="value">1</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="content">
+            <div class="column-12">
+                 <div class="container fight">
+                    <div class="top">
+                        <ul class="selectPlayer">
+                            <li>Player</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="left">
+                        <h2>Player</h2>
+                        
+                        <div class="button increase playerModifier">&#9650;</div>
+                            
+                        <div class="value">0</div>
+                        
+                        <div class="button decrease playerModifier">&#9660;</div>
+                    </div>
+                    
+                    <div class="right">
+                        <h2>Monster</h2>
+                        
+                        <div class="button increase monster">&#9650;</div>
+                            
+                        <div class="value">0</div>
+                        
+                        <div class="button decrease monster">&#9660;</div>
+                    </div>
+                    
+                    <div class="clear"></div>
+                    
+                    <div class="winner bottom">
+                        <h2>Winner</h2>
+                        <div class="value"></div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JS -->
+    <script src="js/player.js"></script>
+    <script src="js/counter.js"></script>   
+</body>
+</html>
